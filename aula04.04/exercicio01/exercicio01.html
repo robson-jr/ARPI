@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <video id="myVideo" src="sample-mp4-file.mp4" controls></video>
+    <meter id="meter"onclick="meter()"min="0"value="0.0" max="125"></meter>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+
+
+
+    <br>
+
+
+    <audio id="myAudio" src="sample-3s.mp3" controls></audio>
+    <img src="imagem. play.webp" onclick="playAudio()">
+    <img src="imagem.pause.png" onclick= "pauseAudio()">
+
+    <script>
+          let audio = document.getElementById("myAudio");
+       function playAudio(){
+        audio.play();
+       }
+       function pauseAudio(){
+        audio.pause();
+       }
+    
+         
+       function playVideo(){
+        let video = document.getElementById("myVideo");
+        video.play();
+       }
+       function pauseVideo(){
+        let video = document.getElementById("myVideo");
+        let secs = video.currentTime;
+        console.log(secs);
+        meter(secs);
+        video.pause();
+       }
+
+       function meter(secs){
+           let meter= document.getElementById('meter');
+        meter.value=secs;
+       }
+
+
+
+
+       
+    </script>
+</body>
+</html>
