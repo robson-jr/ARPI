@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Audio</title>
+</head>
+<body>
+
+    <div>
+        <audio src=""></audio>
+    </div>
+    <img onclick="play()" class="button" id="playButton"></img>
+    <img style="display: none;" onclick="play()" class="button">
+    <Script>
+        let audioElement = document.getElementById("audioFile");
+        let playButton = document.getElementById("playButton");
+        let loadingButton = document.getElementById("loadingButton")
+        let pauseButton = document.getElementById("pauseButton")
+
+        function play(){
+            audioElement.src ="";
+            playButton.style.display = "none";
+            loadingButton.style.display = "block";
+            audioElement.play();
+        }
+
+        audioElement.onloaddata = ()=>{
+            loadingButton.style.display = "none";
+            pauseButton.style.display = "block";
+        }
+        audioElement.ontimeupdate = () =>{
+            if(audioElement.currentTime == audioElement .document.getElementById);
+            pauseButton.style.display = "none";
+            playButton.style.display = "block";
+        }
+    </Script>
+    
+</body>
+</html>
