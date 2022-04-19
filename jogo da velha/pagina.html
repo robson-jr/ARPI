@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="JV.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="jogo">
+      <div class="linha">
+        <div class="casa" id="casa1"></div>
+        <div class="casa" id="casa2"></div>
+        <div class="casa" id="casa3"></div>
+      </div>
+      <div class="linha">
+        <div class="casa" id="casa4"></div>
+        <div class="casa" id="casa5"></div>
+        <div class="casa" id="casa6"></div>
+      </div>
+      <div class="linha">
+        <div class="casa" id="casa7"></div>
+        <div class="casa" id="casa8"></div>
+        <div class="casa" id="casa9"></div>
+      </div>
+    </div>
+
+    <img
+      draggable="true"
+      id="x"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAAAiIiL19fX5+fnx8fG+vr4XFxfGxsbn5+fw8PB7e3vCwsKGhoZnZ2fOzs7g4OBwcHAKCgrV1dWsrKxYWFhhYWGJiYkpKSmSkpJAQEB+fn6cnJwSEhJ0dHQhISFQUFA3Nze1tbUxMTGoqKiWlpZKSkrplqdxAAAEwUlEQVR4nO2c6VbiQBCFFYIo7nHDFVHH93/EmR6MQG5n6eoOXcW5308DfSp6vb1V1cEBIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQoo7zcrTN4VnMcO+L7dEWryepIhUzPaxTyAd7hMFu00Uq5QaCuhCPdQVjvSeLM4JzCOtIOtQShsqv0X8U83pY07FsJJUadVxCYNeicVDv94kjFZNIp6jRWepIxXzWQysn4YOo1agjhb5wjLsBIhXzHK9T8CtFGnWATkPjw//lj2EilRI776Mfy9cNA/EQ9TcoQAMK1qM1MMYyQKfqNeqI8VPUqJq5fpMInZbwVeG6b2DQT3vO+6cWNOqQ6vQYvqfORytkOsW9SYhH7ZglvGKPWFGj4v3l8Eh0akijjnCdFq/wFZ0+WjEKjffakkYdoXugM1sadYTtYyegUekZzw55qsdctqyh36xp1BHip0fwWdkZ1o7p76djK+vROr33+/fwwePdRiql79m8UY06/kDoPj+dgUYN+GgF+Knv/uECPhR1L7db+sz7H/CZtwyRiunW6Qw+MYq4d8xAp07N+mgF+un31nPjGnW0r08n8DTmbjwTrTq9g4eX+SKVgjpd++ktPHvOGKkY9NOvnycn8GRuZ67fpFGnqFFjPlrR5Keo0dPMkYp58eoU5/oyd6ByvDp9hx8a9NEK3z7qC352njvMGFCnz5AHN7c312/yDa+4Txp1oE73SqMO1Ok2o9wBxrNsf8Ob3PHF065T8xp14PSwZpk7uDTgFP+LcR+taNbpQ+7QUtHkp/PcgaUD16f/ucodVzpwy7tXGnXg2eHe+OgKzFs73Iu5/pfC94KvetOCwsG7bIeqNO44MN9ihdL0vHDGmKP+g80jRATz1ipUpsmGg3lraxSVjETQ8oKtqTZm8PtohfoUr27aNOowkALVznjR8Ybm/bTZRyuM+ylqFOdG0zrF/N9yBlvFqaBUUQ3oo2eeVBszqV4IatS9DKYwmNUp+ugqbw3L1Kz6aVMdRcoWBVnxa9SBpXgmr/ELuCcsf8WIZUAWdYp1FOvcSjy2MZfy1VXrgzo1lFq6ogAf3TJMLFcbWdNpVz0a6tRYSg2ePdX/0bBFgSk/bZrrN0EZW0rJ6FPrY1qn/fojGNap5wzfJ8ACShXNpA759kw+cMo0kkaLgTctWPBXYeJaH8/wp42XTPCG011GKiWk9hz/3AbSa5r3TD4s6hRCbq2jwKXBp3Y/Da3rxRJE5ekL4f0RcBup+np/DJN4Z80kLg9UpxFJenjgNkSxn4b5aAWWkqrVqbCHB7ZVUJtKJO2PgKWIjwNHKkTeZ8aITj37+r6XShMoW1ep05heSCZ0KvPRCizXU5d6imf4QRf0WBasTqexvZDU6zS+X5dyP8Uz/OA+wpgn/d39pd2Roqccls6+DBCpEFw8S5IPFPupZ88kSSDB8uCn5KEKSdX3UK1O0/WPVarTIl2/LqV+mrKnHNbxKdBp3Hq0DtbxZU8ixjP8qEIR1Gl2P03d4xh1+tX9pSFJ3z9Wm04hnOheSG19ezIwRG9Ofz+UTAzT4xj7TGTT6QT29c13oQEonfcJIYQQQgghhBBCCCGEEEIIIYQQQgjZA/4CPIcwwWbL27cAAAAASUVORK5CYII="
+      alt=""
+      id="gatinho"
+    />
+  
+    <img
+      draggable="true"
+      id="o"
+      src="data:image/png;base64,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"
+    />
+
+    <script>
+      var casas = document.querySelectorAll(".casa");
+      var itemX = document.getElementById("x");
+      var itemO = document.getElementById("o");
+
+      itemX.addEventListener("dragstart", (event) => {
+        event.dataTransfer.setData("Imagem", event.target.id);
+        console.log("Começou a arrastar");
+      });
+
+      itemO.addEventListener("dragstart", (event) => {
+        event.dataTransfer.setData("Imagem", event.target.id);
+        console.log("Começou a arrastar");
+      });
+
+      casas.forEach((element) => {
+        element.addEventListener("drop", (event) => {
+          var elementId = event.dataTransfer.getData("Imagem");
+          var item = document.getElementById(elementId);
+          var cloneItem = item.cloneNode(false);
+          event.target.appendChild(cloneItem);
+
+            console.log("funcionou");
+
+        });
+        element.addEventListener("dragover", (event)=>{
+            event.preventDefault();
+        })
+        element.addEventListener("dragleave", (event) =>{
+            
+        })
+        element.addEventListener("dragenter", (event)=>{
+
+        })
+      });
+
+     
+    </script>
+  </body>
+</html>
