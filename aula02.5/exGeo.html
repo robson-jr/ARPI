@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="map">
+
+
+
+
+    <div> Latitude: <span id="latitude"></span></div>
+    <div> Longitude: <span id="longitude"></span></div>
+    <button onclick="getLocation()">Obter Localização</button>
+    <script>
+
+        let address = {}
+        let casa = {
+            lat: -23.65927623048367,
+            long: -46.7322266117258
+        }
+
+        function getLocation() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(locationSuccess)
+            }
+        }
+
+        function locationSuccess(data) {
+            address.lat = data.coords.latitude;
+            address.long = data.coords.longitude;
+
+
+
+            console.log("latitude", latitude);
+            console.log("longitude", longitude);
+
+            let home = "http://maps.google.com/maps/api/staticmap?center="+address.lat+ ","+address.long+
+                "%20&zoom=10&size=440x440&maptype=roadmap%20&markers=color:red|color:red|label:a|-23.7485981,-46.6902517|"+casa.lat + ","+casa.long+"|%20&sensor=false&key=AIzaSyDgbNOjjDMHp9YmD0EklFXZTR6Rr2W7VXk&"
+
+
+            let mapa = document.getElementById("map");
+            document.getElementById("latitude").innerHTML =address.lat;
+            document.getElementById("longitude").innerHTML =address.long;
+            mapa.src = home;
+
+            getDistanceBetweenTwoPoints(casa, address)
+
+        }
+
+
+        function getDistanceBetweenTwoPoints(cord1, cord2) {
+            if (cord1.lat == cord2.lat && cord1.lon == cord2.lon) {
+                return 0;
+            }
+            const radlat1 = (Math.PI * cord1.lat) / 180;
+            const radlat2 = (Math.PI * cord2.lat) / 180;
+            const theta = cord1.lon - cord2.lon;
+            const radtheta = (Math.PI * theta) / 180;
+            let dist =
+                Math.sin(radlat1) * Math.sin(radlat2) +
+                Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+            if (dist > 1) {
+                dist = 1;
+            }
+            dist = Math.acos(dist);
+            dist = (dist * 180) / Math.PI;
+            dist = dist * 60 * 1.1515;
+            dist = dist * 1.609344; //convert miles to km
+
+            console.log(dist);
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
